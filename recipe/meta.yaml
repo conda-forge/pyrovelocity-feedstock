@@ -45,8 +45,8 @@ requirements:
     - flax >=0.6.1
     - h5py >=3.8.0
     - hydra-core >=1.3.2
-    - jax >=0.4.13
-    - jaxlib >=0.4.12
+    - jax >=0.4.13,<=0.4.23
+    - jaxlib >=0.4.12,<=0.4.23
     - jaxtyping >=0.2.25
     - leidenalg >=0.9.1
     - lightning >=2.0.0
