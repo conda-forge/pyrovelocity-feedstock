@@ -1,10 +1,10 @@
 {% set name = "pyrovelocity" %}
-{% set version = "0.2.0b11.dev0" %}
+{% set version = "0.2.0b11.dev1" %}
 
 {% set gitorg = "pinellolab" %}
 # {% set gittag = "v0.2.0-beta.10" %}
 # {% set gitref = "beta" %}
-{% set gitrev = "2734fbea67519cf6632a7d40cc230b8c4f86b1ba" %}
+{% set gitrev = "dac426b7e1e73511e03aef7dfe68088479a70c58" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,7 @@ source:
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/refs/tags/{{ gittag }}.tar.gz
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/refs/heads/{{ gitref }}.tar.gz
   url: https://github.com/{{ gitorg }}/{{ name }}/archive/{{ gitrev }}.tar.gz
-  sha256: 8e104b2a84a30ea964c35aa303112826f967aadda9840fd003da0d0025318248
+  sha256: 1be61bd443155e7d3861970653dceb96cf5378624a5e2dcb5bf40cd7b273ca9d
 
 build:
   entry_points:
