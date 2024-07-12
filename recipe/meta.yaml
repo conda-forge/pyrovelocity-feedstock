@@ -1,5 +1,5 @@
 {% set name = "pyrovelocity" %}
-{% set version = "0.2.0b22" %}
+{% set version = "0.2.0" %}
 
 # {% set gitorg = "pinellolab" %}
 # {% set gittag = "v0.2.0-beta.22" %}
@@ -13,7 +13,7 @@ package:
 source:
   # source archive from PyPI for release to main label
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dbd71585ea6269951f0e8db476965b82cf3c3166c00a9e9c07f472d68b564acd
+  sha256: 441d6a148e89404a76276650b63c3d3f103754b5fd0f2233c26e115f400bfb4f
 
   # source archive from git tag/ref/rev for testing/release to _dev label
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/refs/tags/{{ gittag }}.tar.gz
