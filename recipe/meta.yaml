@@ -1,5 +1,5 @@
 {% set name = "pyrovelocity" %}
-{% set version = "0.3.0b1" %}
+{% set version = "0.3.0b7" %}
 
 # {% set gitorg = "pinellolab" %}
 # {% set gittag = "v0.2.0-beta.22" %}
@@ -13,7 +13,7 @@ package:
 source:
   # source archive from PyPI for release to main label
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 19505f6f9875fc2c4585b2d36982176f0fab8fbfedb90f03bf1e2d487d56118b
+  sha256: ce72517d51530c9306d37c58f42bbb6b7f85ce4c93e60026d10ab7c9d546daee
 
   # source archive from git tag/ref/rev for testing/release to _dev label
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/refs/tags/{{ gittag }}.tar.gz
@@ -37,6 +37,7 @@ requirements:
   run:
     - python >=3.11,<3.12
     - adjusttext >=1.1.1
+    - altair >=5.3.0
     - anndata >=0.10.5
     - anyio >=4.3.0
     - appdirs >=1.4.4
@@ -50,7 +51,10 @@ requirements:
     - diskcache >=5.6.1
     - duckdb >=1.0.0
     - einops >=0.7.0
+    - expression >=5.0.2
     - flax >=0.8.1
+    - fsspec >=2024.3.0
+    - greenlet >=3.0.3
     - h5py >=3.9.0
     - httpx >=0.27.0
     - ibis-duckdb >=9.2.0
@@ -62,12 +66,12 @@ requirements:
     - jaxtyping >=0.2.25
     - leidenalg >=0.9.1
     - lightning >=2.0.0
-    - matplotlib-base >=3.8.4
+    - matplotlib-base >=3.9.1
     - mlflow >=2.13.0
     - numpyro >=0.15.0
     - pandas >=2.0.0
     - plumbum >=1.8.2
-    - polars >=1.2.1
+    - polars >=0.20.17
     - pyarrow >=14.0.2
     - pyro-ppl >=1.9.1
     - pytorch >=2.1.2
@@ -75,7 +79,7 @@ requirements:
     - returns >=0.22.0
     - rich >=13.7.1
     - scanpy >=1.10.1
-    - scipy >=1.10.1
+    - scipy >=1.10.1,<1.14.0
     - scvelo >=0.3.1
     # this upper bound should be removed
     # when it is removed as a constraint
@@ -84,16 +88,22 @@ requirements:
     - scikit-learn <1.2.0
     - scvi-tools >=1.1.1
     - seaborn >=0.13.2
+    - sparse >=0.15.4
+    - statsmodels >=0.14.2
     - sympy >=1.12
     - termcolor >=2.2.0
+    - tiledb-py >=0.31.1
     - torchmetrics >=1.2.1
     - trio >=0.26.0
     - validators >=0.33.0
+    - vegafusion >=1.6.9
+    - vegafusion-python-embed >=1.6.9
+    - vl-convert-python >=1.6.0
     - zstandard >=0.23.0
     # workflows
     - dataclasses-json >=0.5.7
     - dulwich >=0.21.7
-    - flytekit >=1.13.0
+    - flytekit >=1.13.3
     - google-api-python-client >=2.138.0
     - google-cloud-storage >=2.18.0
     - hydra-core >=1.3.2
