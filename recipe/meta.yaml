@@ -27,7 +27,7 @@ build:
   noarch: python
   script: |
     {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,7 +42,7 @@ requirements:
     - anyio >=4.3.0
     - appdirs >=1.4.4
     - arviz >=0.17.1
-    - astropy >=6.1.2
+    - astropy-base >=6.1.2
     - beartype >=0.18.5
     - click >=8.1.7
     - colorlog >=6.7.0
