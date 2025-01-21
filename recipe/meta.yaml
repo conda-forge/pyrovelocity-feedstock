@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "pyrovelocity" %}
 {% set version = "0.3.0" %}
 
@@ -12,7 +13,7 @@ package:
 
 source:
   # source archive from PyPI for release to main label
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7646b3196e7984b19d76549ab3654e7ef93ecc23888d2ea2a98d261d5060b866
 
   # source archive from git tag/ref/rev for testing/release to _dev label
@@ -27,15 +28,15 @@ build:
   noarch: python
   script: |
     {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.11,<3.12
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.6.0
   run:
-    - python >=3.11,<3.12
+    - python >={{ python_min }},<3.12
     - adjusttext >=1.1.1
     - altair >=5.3.0
     - anndata >=0.10.5
@@ -138,6 +139,7 @@ test:
     - pytest-mock
     - requests-mock
     - xdoctest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pinellolab/pyrovelocity
