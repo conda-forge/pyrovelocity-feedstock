@@ -11,7 +11,7 @@ Summary: Probabilistic modeling of RNA Velocity with pyro.
 
 Development: https://github.com/pinellolab/pyrovelocity
 
-Documentation: https://docs.pyrovelocity.net
+Documentation: https://docs.pyrovelocity.net/
 
 Pyrovelocity is a library for probabilistic inference in minimal models approximating gene expression
 dynamics from multimodal single-cell sequencing data.
@@ -20,7 +20,6 @@ dynamics from multimodal single-cell sequencing data.
 - source: [https://github.com/pinellolab/pyrovelocity](https://github.com/pinellolab/pyrovelocity)
 
 PyPI: [https://pypi.org/project/pyrovelocity](https://pypi.org/project/pyrovelocity)
-
 
 Current build status
 ====================
