@@ -21,18 +21,18 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - pyrovelocity=pyrovelocity.workflows.cli:main
 
 requirements:
   host:
-    - python >=3.11,<3.12
+    - python ${{ python_min }}.*
     - pip
     - poetry-core >=1.6.0,<2
   run:
-    - python >=3.11,<3.12
+    - python >=${{ python_min }},<3.12
     - adjusttext >=1.1.1
     - altair >=5.3.0
     - anndata >=0.10.5
@@ -120,11 +120,13 @@ requirements:
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - pyrovelocity
       pip_check: false
   - requirements:
       run:
+        - python ${{ python_min }}.*
         - hypothesis
         - pytest
         - pytest-cov
