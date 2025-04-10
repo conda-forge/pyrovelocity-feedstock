@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: pyrovelocity
-  version: "0.4.4"
+  version: "0.4.5"
 
 package:
   name: ${{ name|lower }}
@@ -16,7 +16,7 @@ source:
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/refs/heads/{{ gitref }}.tar.gz
   # url: https://github.com/{{ gitorg }}/{{ name }}/archive/{{ gitrev }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: b15a1140c6f2fcdc4b573008ddb911443bdec6817606552a1ff253f2cb9e82a0
+  sha256: e264abcf4924d55929e4905889ac883b9078e553821fa74103256a8bd9bf779e
 
 build:
   number: 0
